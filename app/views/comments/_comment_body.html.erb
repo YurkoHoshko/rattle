@@ -1,0 +1,7 @@
+<blockquote data-comment-id=<%= comment.id %>>
+  <p><%= comment.content %></p>
+  <footer>
+    <cite><%= link_to(comment.user.email, user_path(comment.user)) %></cite>
+    <cite><%= comment.created_at %></cite>
+  </footer>
+</blockquote> 

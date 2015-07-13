@@ -1,0 +1,7 @@
+<div class = "well">
+  <h2><%= @user.email %></h2>
+  <h3>Last 5 user comments:</h3>
+  <% @last_comments.each  do |comment| %>
+    <%= render partial: "comments/comment_body", locals: { comment: comment } %>
+  <% end %>
+</div>

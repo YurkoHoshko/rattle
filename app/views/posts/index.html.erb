@@ -1,0 +1,7 @@
+<% @posts.each do |post| %>
+  <div class="well">
+    <%= render partial: "post_content", locals: {post: post}%>
+    <p><%= link_to("Read more", post_path(post))%>
+    <%= render partial: "post_info", locals: {post: post} %>
+  </div>
+<% end %>

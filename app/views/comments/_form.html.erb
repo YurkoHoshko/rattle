@@ -1,0 +1,15 @@
+<div class="well">
+  <div id="reply-to-comment"></div>
+  <%= form_for(@comment, url: post_comments_path(@post)) do |f| %>
+
+  <div class="form-group clearfix">
+    <%= f.text_area :content, autocomplete: "off", class: "form_control col-md-12" %>
+    <%= f.hidden_field :post_id%>
+    <%= f.hidden_field :parent_id%>
+  </div>
+
+  <div class="actions clearfix">
+    <%= f.submit "Add Comment", class: "btn btn-primary" %>
+  </div>
+<% end %>  
+</div>

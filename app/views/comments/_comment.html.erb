@@ -1,0 +1,8 @@
+<div>
+  <%= render partial: "comments/comment_body", locals: { comment: comment }%> 
+  <a href="#" class="reply" >Reply</a>
+  <div class="nested-comment">
+    <%= render partial: "comments/comment", collection: @comments.select {|c| c.parent_id  == comment.id}%>    
+  </div>
+  <hr>  
+</div>

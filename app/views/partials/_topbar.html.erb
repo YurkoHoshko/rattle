@@ -1,12 +1,12 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Rattle</a>
+      <%= link_to('Rattle', posts_path, class: "navbar-brand") %>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home Page</a></li>
-        <li><a href="#">Add Post</a></li>
+        <li><%= link_to('Add post', new_post_path) %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user%>

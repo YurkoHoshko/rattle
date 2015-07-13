@@ -13,3 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(".reply").click(function(e) {
+  e.preventDefault();
+  blockquote = $(this).parent().find("blockquote:first");
+  $("#comment_parent_id").val(blockquote.data().commentId);
+  $("#reply-to-comment").html(blockquote.clone());
+});
